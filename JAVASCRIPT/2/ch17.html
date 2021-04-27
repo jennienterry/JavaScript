@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var val;
+            setTimeout(function () {
+                console.log("안녕~~~"); //먼저 실행되었다고 먼저 끝나는게 아니다.
+                val = 100;
+                console.log("val2 : " + val);
+            }, 3000); // 인자가 2개인 상태 !
+
+            console.log("val1 : " + val);
+            // setTimeout(function(){
+            //     console.log('잘가~~~'); // 이게 먼저 찍힘, 응답 먼저 오는게 먼저 찍히는 것
+            // }, 1000);
+
+            /* setTimeout(hello,2000) */
+            /* setTimeout(인자1=function함수, 인자2=시간값) */
+        </script>
+    </body>
+</html>

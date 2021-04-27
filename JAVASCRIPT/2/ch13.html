@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        arr.push(10);
+        arr.push(20);
+        arr.push(30);
+        arr.push(40);
+
+//     arr.unshift(11); // 앞에부터 값을 넣을 때 (제일 밑에 있는게 더 앞으로 옴 ex)11,12넣으면 배열에는 [12,11...])
+//     arr.shift(); // 순차적으로 앞에 값을 삭제하기
+
+//     arr.length = arr.length-1; // 순차적으로 뒤에부터 값을 여러개 삭제하기
+//     arr.pop(); // 순차적으로 뒤에 값을 하나씩 삭제하기
+
+        arr.unshift(11);
+        arr.unshift(12);
+
+        console.log('arr : ' + arr);
+        var delVal = arr.splice(2,1); //중간에 있는 값 삭제할 때 = (몇번방에 있는거, 몇개)
+        console.log('arr : ' + arr);
+        console.log('delVal : ' + delVal);
+    </script>
+</body>
+</html>

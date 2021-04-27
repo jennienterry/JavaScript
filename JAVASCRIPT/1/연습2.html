@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var age = prompt("나이를 입력하세요");
+      if (age != "") {
+        if (age % 2 == 1) {
+          // /는 나누기, %하면 나머지
+          alert("홀수입니다.");
+        } else if (age % 2 == 0 && age != 0) {
+          alert("짝수입니다.");
+        }
+      } else {
+        alert("숫자를입력하세요");
+      }
+      //그룹화가 되면  if문을 아무리 길게써도 그 중 하나만 실행됨
+      //if문의 조건문이 false라면 else를 실행해라 (true건 false건 실행함)
+      //if문의 조건문이 false이고, else if가 true면 실행하고, false면
+      // else if : if가 아니고 else if로 넘어가기
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-- promise는 return ㅇ -->
+        <!-- promise는 함수이므로 객체만들 때 하나만!   ???? 파라미트? 두개까지된다( 뭐가하나야) -->
+        <!-- 통신은 promise로 감싼다 ! -->
+        <script>
+            var fn = function (resolve, reject) {
+                // 파라미트 순서가 중요한 것
+                //오래걸리는 작업 !
+                /*    if(작업이 잘 완료됐다면) {
+                resolve();
+            }else {
+                
+                reject();
+            }
+        }
+        */
+
+                var prom = new Promise(fn);
+                var pro1 = new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        resolve(200); // 둘중 하나만 써야함
+                        reject(10); // 오류 발생했을 때
+                    }, 2000);
+                });
+                pro1.then(function (aaaaa) {
+                    console.log("pro1 : 1" + aaaaa);
+                }).catch(function (aa) {
+                    console.log("err 발생" + aa);
+                });
+
+                var pro2 = new Promise(function (resolve) {
+                    setTimeout(function () {
+                        resolve(200); // 여기서 값 안보내면
+                    }, 2000);
+                });
+
+                pro1.then(function (item) {
+                    // undefined 됨
+                    console.log("item : " + item);
+                });
+
+                pro2.then(function (res) {
+                    // then대신 catch도 가능
+                    console.log("pro2 : " + res);
+                });
+            };
+            //닫는거
+            //Stream (빨대)
+        </script>
+    </body>
+</html>

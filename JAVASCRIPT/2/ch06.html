@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var result = 10 && 12 && 17; // and는 true인지 false인지 끝까지 다 본다. / 하나라도 false면 false임
+        console.log(result);
+
+        result = 1 || 10 || 12; // or은 제일 앞에 값이 true면 그냥 제일 처음 값을 사용함 / or은 끝까지 물어봄
+        console.log(result); // 하나라도 true면 true
+
+        var a = ''; //false
+        var b = '안녕'; //true
+        
+        console.log(a || b); // true라서 '안녕'을 찍음
+    </script>
+</body>
+</html>

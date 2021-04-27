@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // NaN : Not a Number
+        var val_1 = '10'; // 문자
+        var val_2 = 5;
+
+        console.log(val_1 + val_2);
+        console.log(parseInt(val_1) + val_2); // 형변환
+        console.log(Number(val_1) + val_2); // 형변환
+        console.log(val_1 * val_2);
+        console.log(val_1 - val_2);
+        console.log(val_1 / val_2);
+        console.log(val_1 % val_2);
+        // let변수, const상수 // es6문법 / var과 let차이 : 호이스팅 되냐 안되냐 차이
+
+        console.log('-------');
+        var val_3 = 7;
+        var val_4 = 9;
+
+        console.log(val_3 + val_4);
+        console.log('' + val_3 + val_4); // 정수를 String으로 만들기
+        console.log(String(val_3) + val_4); // (위와 같은데 다른방식) 하나만 String바꿔도 문자로 읽음
+    </script>
+</body>
+</html>

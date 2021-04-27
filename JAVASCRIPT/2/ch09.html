@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = { // 객체 짜잔
+            name: '홍길동', // =말고 :콜론사용 / name,age,run 전부 멤버필드 / 은닉화 x
+            age: 30,
+            run: function(){ // 익명함수 (이름 x) 이름 줄순 있다.
+                console.log('%s이(가) 달린다.', this.name);
+            }
+    };
+        console.log(obj); // console에 object라고 뜸 (객체)
+        obj.name = '하니'; // 은닉화 안해서 언제든 바꿀 수 있음
+        obj['name'] = '홍두깨';
+        obj.run(); //함수
+        
+        obj.run = 10; // 값이 들어가게 되면 이렇게 적어야함 (정수를 가리킴)
+        console.log('run : ' + obj.run); 
+
+
+        var sum = function (n1,n2){
+            return n1+n2;
+        }
+        // 위아래 똑같음
+        function sum2(n1,n2){
+            return n1+n2;
+        }
+console.log(sum(10,20));
+console.log(sum2(10,20));
+    </script>
+</body>
+</html>

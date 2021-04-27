@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <!-- 함수/ 객체 안에 있으면 메소드 -->
+    <!-- javascript에서는 overloading안된다.(= 이름 다르게) 위에꺼는 덮히고 아래에 있는것만 읽음 / 타입 안적어줘도 됨 -->
+        <script>
+        function sum (n1,n2){ // 변수명만 적기!
+            return n1+n2;
+        }
+        function sum2 (n1,n2){
+            console.log('sum2 : %d', n1+n2);
+        }
+
+        var result = sum(10,20);
+        console.log('%s = %d', 'result', result);
+
+        //var ddd; if(ddd = sum (10,20)) {console.log(ddd);} 도 가능
+        if(test = sum(10,20)){
+            console.log(test);
+        }
+        
+        result = sum2 (11,22);
+        console.log(result);
+        console.log('%s = %d', 'result', result);
+    </script>
+</body>
+</html>

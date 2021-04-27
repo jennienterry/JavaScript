@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            setTimeout(function () {
+                console.log("1");
+            }, 5000);
+
+            setTimeout(function () {
+                console.log("2");
+            }, 3000);
+
+            setTimeout(function () {
+                console.log("3");
+            }, 1000);
+
+            //위에거를 콜백처리하기
+            setTimeout(function () {
+                console.log("1");
+
+                setTimeout(function () {
+                    console.log("2");
+
+                    setTimeout(function () {
+                        console.log("3");
+                    }, 1000);
+                }, 3000);
+            }, 5000);
+            /*
+        동기 : 순차적으로 실행하는거(앞 명령이 끝나야 다음명령)
+        비동기 : 걍 다 실행 (앞 명령 기다리지 않고 다음 명령)
+      */
+        </script>
+    </body>
+</html>

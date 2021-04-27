@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 20, 30, 40, 50, 60];
+        var arr2 = {
+            0: 10,
+            1: 20,
+            2: 30,
+            3: 40,
+            4: 50,
+            5: 60,
+            length: 6,
+            map: function(fn){ 
+                var temp = [];
+                for(var i=0;i<this.length;i++){
+                   var result2 = fn(this[i]);    // 호출, 이 자체가 값이 됨. 그래서 무조건 '= 값을 받는다'가 있어야함
+                   temp.push(result2); // = temp[i] = result2;
+                }
+                return temp; 
+            }
+        }
+
+        arr[3] = 40;
+
+        var result = arr.map(function (item) {
+            return item * 2; // 여기와
+        });
+
+        var result2 = arr2.map(function (item) {
+            return item * 2; // 여기에 같은 식을 넣어도 결과가 같아야함
+        });
+
+        console.log('result : ' + result);
+        console.log('result2 : ' + result2);
+    </script>
+</body>
+
+</html>
